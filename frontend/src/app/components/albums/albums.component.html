@@ -1,0 +1,103 @@
+<div class="album-wrapper">
+  <div class="album-buttom album-buttom-prev">
+    <button class="ui icon button" (click)="clickButtonPrev()"><i class="chevron left icon"></i></button>
+  </div>
+ 
+  <div class="ui card album album-back-left">
+    <div class="image album-image">
+      <img id="album-image-back-left" src="">
+    </div>
+    <div class="content album-foot">
+      <div class="header">
+        <p class="album-name" id="album-name-back-left">album</p>
+      </div>
+      <div class="meta">
+        <p class="album-artist" id="album-artist-back-left">artist</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui card album album-middle-left">
+    <div class="image album-image">
+      <img id="album-image-middle-left" src="">
+    </div>
+    <div class="content album-foot">
+      <div class="header">
+        <p class="album-name" id="album-name-middle-left">album</p>
+      </div>
+      <div class="meta">
+        <p class="album-artist" id="album-artist-middle-left">artist</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="ui card album album-center">
+    <div class="image album-image">
+      <img id="album-image-center" src="">
+    </div>
+    <div class="content album-foot">
+      <div class="header">
+        <p class="album-name" id="album-name-center" (change)="onTextChange()">album</p>
+      </div>
+      <div class="meta">
+        <p class="album-artist" id="album-artist-center">artist</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui card album album-middle-right">
+    <div class="image album-image">
+      <img id="album-image-middle-right" src="">
+    </div>
+    <div class="content album-foot">
+      <div class="header">
+        <p class="album-name" id="album-name-middle-right">album</p>
+      </div>
+      <div class="meta">
+        <p class="album-artist" id="album-artist-middle-right">artist</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui card album album-back-right">
+    <div class="image album-image">
+      <img id="album-image-back-right" src="">
+    </div>
+    <div class="content album-foot">
+      <div class="header">
+        <p class="album-name" id="album-name-back-right">album</p>
+      </div>
+      <div class="meta">
+        <p class="album-artist" id="album-artist-back-right">artist</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="album-buttom album-buttom-next">
+    <button class="ui icon button" (click)="clickButtonNext()"><i class="chevron right icon"></i></button>
+  </div>
+</div>
+
+
+<div class="ui raised segments songs-wrapper">
+  <div class="ui segment song-elem" *ngFor="let songItem of songItems" (click)="clickedSong(this)">
+    <div class="song-id">
+      <p>{{songItem.song_order}}</p>
+    </div>
+    <div class="star-button">
+      <button class="ui button star-button-item" (click)="favThisSong(songItem.song_order)" tooltip="MARK AS FAVORITE">
+        <p class="star-icon" [ngClass]="{ 'star-icon-fav': (songFav[albumIndex]).indexOf(songItem.song_order) > -1 }">&#9733;</p>
+      </button>
+    </div>
+    <div class="song-name">
+      <p>{{songItem.song_name}}</p>
+    </div>
+    <div class="ui label song-label" *ngFor="let label of songItem.song_label">
+      <p>{{label}}</p>
+    </div>
+    <div class="song-duration">
+      <p>{{songItem.song_duration}}</p>
+    </div>
+  </div>
+</div>

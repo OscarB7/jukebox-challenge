@@ -1,0 +1,311 @@
+/* ****************************** General ****************************** */
+* {
+  font-family: Roboto;
+  font-size: 1.1vw;
+}
+
+
+/* ****************************** Carouse ****************************** */
+/* Album container ***************** */
+.album-wrapper {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-spacing: -5vw;
+}
+
+
+/* Album card ***************** */
+.album {
+  display: flex;
+  width: 17vw;
+  height: 21vw;
+  margin: 3vw;
+  margin: 0;
+  border-radius: 0.2em;
+  box-shadow: 0 0 0.5vw 0.2vw #DDDDDD;
+}
+
+/* Center section */
+.album-center {
+  background-color: #0085B2;
+  box-shadow: none;
+  margin-top: 4.8vw;
+  z-index: 10;
+}
+.album-center p {
+  color: white;
+}
+
+/* Middle section */
+.album-middle-left {
+  margin-top: 2.4vw;
+  z-index: 5;
+  left: 5vw;
+}
+.album-middle-right {
+  margin-top: 2.4vw;
+  z-index: 5;
+  right: 5vw;
+}
+
+/* Back section */
+.album-back-left {
+  z-index: 1;
+  left: 10vw;
+}
+.album-back-right {
+  z-index: 1;
+  right: 10vw;
+}
+
+
+/* Album card sections ***************** */
+/* Album image */
+.ui.card > .album-image {
+  background: none;
+}
+.album-image > img {
+  padding: 2vw;
+  padding-bottom: 0;
+}
+
+/* Album description */
+.ui.card > .album-foot {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-top: 0;
+}
+.album-foot div {
+  justify-content: space-between;
+}
+.album-name,
+.album-artist > p {
+  position: relative;
+  display: inline-block;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 1.3em;
+  line-height: 1.3em;
+}
+.album-name {
+  max-height: 2.6em;
+}
+
+
+/* Carouse buttoms ***************** */
+.album-buttom {
+  align-self: center;
+}
+
+.album-buttom > .button {
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+}
+
+.album-buttom-prev {
+  position: relative;
+  left: 9vw;
+  transition: all color 0.6s ease-out;
+}
+
+.album-buttom-next {
+  position: relative;
+  right: 9vw;
+  transition: all color 0.6s ease-out;
+}
+
+
+.album-buttom-prev > .button,
+.album-buttom-next > .button {
+  transition: all 0.6s ease-out;
+}
+
+/* Buttom animation */
+.album-buttom-prev > .button:hover, 
+.album-buttom-next > .button:hover {
+  background-color: #0085B2;
+  color: white;
+}
+
+.album-buttom-prev > .button:active,
+.album-buttom-next > .button:active {
+  background-color: #00698C;
+  color: white;
+  transition: all 0.1s ease-out;
+}
+
+
+
+
+
+/* ****************************** Songs ****************************** */
+/* Song container ***************** */
+.songs-wrapper {
+  width: 41vw;
+  margin: 0 auto;
+  margin-bottom: 5vw;
+  overflow: visible;
+}
+
+/* Song row ***************** */
+/* All song row */
+.song-elem {
+  height: 3.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #F3F6F7;
+  transition: background-color 0.6s ease-out;
+}
+
+.song-elem > div {
+  margin-right: 0.5vw;
+  transition: background-color 0.6s ease-out;
+}
+
+/* Song ID */
+.song-id {
+  padding: 0.4em;
+  border-radius: 0.2em;
+  background-color: #90B9C9;
+  min-width: 2vw;
+  max-width: 2vw;
+  min-height: 2vw;
+  max-height: 2vw;
+  position: relative;
+}
+.song-id > p {
+  color: #FFFFFF;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.star-icon {
+  font-size: 2em;
+  color: #DDDDDD;
+  transition: color 0.6s ease-out;
+}
+
+.star-icon-fav {
+  color: #D9D900 !important;
+}
+
+/* Song name */
+.song-name {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.song-name > p {
+  color: #0085B2;
+  font-weight: bold;
+  transition: color 0.6s ease-out;
+  position: relative;
+  /* display: inline-block; */
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 1.3em;
+  line-height: 1.3em
+}
+
+/* Song labels */
+.song-label {
+  background-color: #DDDDDD;
+  height: 1.8vw;
+}
+
+.song-label > p {
+  font-size: 0.9vw !important;
+  margin: auto;
+  text-align: center;
+  margin: -5% 0;
+
+}
+
+/* Song duration */
+.song-duration {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+
+/* Song animation ***************** */
+/* Hover row */
+.song-elem:hover{
+  background-color: #0085B2;
+}
+
+.song-elem:hover > .label {
+  background-color: #90B9C9;
+}
+
+.song-elem:hover .star-icon {
+  color: #FFFFFF;
+}
+
+.song-elem:hover > .song-name > p {
+  color: #FFFFFF;
+}
+
+/* Selected row */
+.song-elem:active,
+#clicked-song {
+  background-color: #0085B2;
+}
+
+#clicked-song .song-name > p {
+  color: #FFFFFF
+}
+
+#clicked-song .song-label {
+  background-color: #DDDDDD;
+}
+
+/* Animation for fav song */
+.star-button:hover>.star-icon-comment {
+  display: inline;
+}
+
+/* Set transparent background to song elements */
+.song-id > p,
+.star-icon, 
+.star-button > button.ui.button.star-button-item,
+.song-name > p, 
+.song-label > p, 
+.song-duration > p {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* tooltip */
+[tooltip]:before {
+  content: attr(tooltip);
+  position: absolute;
+  opacity: 0;
+  transition: all 0.15s ease;
+  padding: 0.6vw;
+  color: #333333;
+  border-radius: 0.3vw;
+}
+
+[tooltip]:hover:before {
+  opacity: 1;
+  z-index: 2000;
+  background: #BBBBBB;
+  margin-top: -2vw;
+  margin-left: -3.5vw;
+}
+
+[tooltip]:not([tooltip-persistent]):before {
+  pointer-events: none;
+}
+
+

@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "jukebox backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Oscar Blanco",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "pg": "^7.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
